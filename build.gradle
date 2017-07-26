@@ -1,0 +1,21 @@
+group 'test'
+version '1.0-SNAPSHOT'
+
+// We're creating a Java Application:
+apply plugin: 'application'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+// Download dependencies from Maven Central:
+repositories {
+    mavenCentral()
+}
+
+// Install the Nexmo Client library:
+dependencies {
+    compile 'com.nexmo:client:2.0.1'
+}
+
+// We'll create this class to contain our code:
+mainClassName = "getstarted.SendSMS"
